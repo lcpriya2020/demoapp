@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../App.css';
 import {  Form, Input, Row, Col, Button } from 'antd';
 import Title from 'antd/lib/typography/Title';
+import AddPolicy from './addpolicy';
 
 const items = [
     {
@@ -74,12 +75,20 @@ const size = {
    wrapperCol: { span: 24 },
   };
 
-function Hrreadycube() {
-    const clickAddPolicy = () => {
-       console.log('clicked');
-    }
+function Hrreadycube() {    
+
+    const [buttonClicked, setButtonClicked] = useState(false);
+
+    const clickAddPolicy = () => {   
+        setButtonClicked(true)
+         }
+
+        console.log('clicked', buttonClicked); 
 
     return(
+        
+        buttonClicked? <AddPolicy /> : 
+
         <div id="hrreadycube" className="App">
             <div>
             <Form layout="inline" {...size} >
