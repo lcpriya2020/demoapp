@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../App.css';
 import {  Form, Input, Row, Col, Button } from 'antd';
 import Title from 'antd/lib/typography/Title';
@@ -77,19 +77,26 @@ const size = {
 
 function Hrreadycube() {    
 
+    
     const [buttonClicked, setButtonClicked] = useState(false);
+
+    useEffect(() => {
+        console.log('intialize');
+      }, []);
 
     const clickAddPolicy = () => {   
         setButtonClicked(true)
          }
 
-        console.log('clicked', buttonClicked); 
+        // console.log('clicked', buttonClicked); 
 
     return(
         
         buttonClicked? <AddPolicy /> : 
 
         <div id="hrreadycube" className="App">
+            HR ReadyCube
+            <div className="App-List">
             <div>
             <Form layout="inline" {...size} >
             <Form.Item>
@@ -121,7 +128,7 @@ function Hrreadycube() {
               );
             })
           }
-                              
+          </div>                
         </div>
     );
 }

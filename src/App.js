@@ -1,14 +1,16 @@
 import React from 'react';
 import './App.css';
-import { Layout } from 'antd';
-import AppHeader from './components/common/header';
-import AppSider from './components/common/sider';
-import AppContent from './components/common/content';
+import AppHome from './components/common/appHome';
+// import { Layout } from 'antd';
+// import AppHeader from './components/common/header';
+// import AppSider from './components/common/sider';
+// import AppContent from './components/common/content';
 
 function App() {
   return (
    <div className="App">    
-    <Layout>
+   <AppHome />
+    {/* <Layout>
       <AppHeader />
       <Layout>
         <AppSider />
@@ -16,7 +18,7 @@ function App() {
         <AppContent />
         </Layout>        
       </Layout>
-    </Layout>
+    </Layout> */}
   </div>
   );
 }

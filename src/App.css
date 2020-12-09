@@ -4,6 +4,18 @@
   text-align: left;
 }
 
+.App-content {
+  background: white;
+  align-items: left;
+  font-size: 20px;
+}
+
+.App-List {
+  background: white;
+  align-items: left;
+  font-size: 14px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
